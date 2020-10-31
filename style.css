@@ -1,0 +1,35 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: consolas;
+}
+body {
+    display: flex;
+    justify-content: center; /*make text center*/
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+}
+.loader {
+    position: relative;
+}
+.loader span {
+    position: relative;
+    font-size: 2em;
+    color: #fff;
+    display: inline-block;
+    animation: animate-my-name 2s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+    animation-play-state: paused;
+}
+.loader:hover span {
+    animation-play-state: running;
+}
+@keyframes animate-my-name {
+    0%, 40%, 100% {
+        transform: translateY(0);
+    }
+    20% {
+        transform: translateY(-50px);
+    }
+}
